@@ -5,8 +5,8 @@
 </head>
 <body ng-controller="MainCtrl">
   <nav>
-    <li ng-repeat="link in navLinks">
-      <a href="{{link.url}}">{{link.name}}</a>
+    <li ng-repeat="link in navLinks[0].NAVIGATION">
+      <a href="{{link.PATH}}">{{link.LINKTITLE}}</a>
     </li>
   </nav>
   <h1>{{hello}}</h1>
