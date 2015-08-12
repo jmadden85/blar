@@ -1,0 +1,24 @@
+{
+  "name": "charm",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jmadden85/charm",
+  "authors": [
+    "jmadden85 <jmadden85@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libraries/",
+    "test",
+    "tests",
+    "public/assets/lib/"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "jquery": "~2.1.4",
+    "ng-resource": "~0.0.2",
+    "lodash": "~3.10.1"
+  }
+}

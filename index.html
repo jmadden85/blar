@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="Charm">
+<head>
+  <title>Charmant</title>
+</head>
+<body ng-controller="MainCtrl">
+  <nav>
+    <li ng-repeat="link in navLinks">
+      <a href="{{link.url}}">{{link.name}}</a>
+    </li>
+  </nav>
+  <h1>{{hello}}</h1>
+
+  <script type="text/javascript" src="public/assets/lib/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="public/assets/lib/lodash/lodash.js"></script>
+  <script type="text/javascript" src="public/assets/lib/angular/angular.js"></script>
+  <script type="text/javascript" src="public/assets/lib/ng-resource/dist/ng-resource.js"></script>
+
+  <script type="text/javascript" src="charmApp.js"></script>
+</body>
+</html>
