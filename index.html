@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html ng-app="Charm">
+<html ng-app="Charm" ng-controller="MainCtrl">
 <head>
-  <title>Charmant</title>
+  <title ng-bind="home[0].PAGETITLE">Charmant | Home</title>
+  <meta name="description" content="{{home[0].META_DESCRIPTION}}">
+  <meta name="description" content="{{home[0].META_KEYWORDS}}">
 </head>
-<body ng-controller="MainCtrl">
-  <nav>
-    <li ng-repeat="link in navLinks[0].NAVIGATION">
-      <a href="{{link.PATH}}">{{link.LINKTITLE}}</a>
-    </li>
-  </nav>
-  <h1>{{hello}}</h1>
+<body>
+<section class="wrapper">
+  <header>
+    <nav>
+      <li ng-repeat="link in nav[0].NAVIGATION">
+        <a href="{{link.PATH}}">{{link.LINKTITLE}}</a>
+      </li>
+      <li class="bookButton">
+        <a href="">Book Now</a>
+      </li>
+    </nav>
+  </header>
+  <section class="content">
+
+  </section>
+  <footer>
+    <span>101 state Street</span>
+    <span>|</span>
+    <span>La Crosse, WI 54601</span>
+    <span>|</span>
+    <span>1-866-697-7300</span>
+    <span>|</span>
+    <span>sign up for emails</span>
+  </footer>
+</section>
 
   <script type="text/javascript" src="public/assets/lib/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="public/assets/lib/lodash/lodash.js"></script>

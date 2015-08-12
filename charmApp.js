@@ -2,10 +2,17 @@
 angular.module('Charm', [
   'ngResource'
 ])
-.controller('MainCtrl', function ($scope, NavService) {
-  $scope.navLinks = NavService.query();
-  $scope.hello = 'world';
+.controller('MainCtrl', function ($scope, GetNav, GetHome) {
+  $scope.nav = GetNav.query();
+  $scope.home = GetHome.query();
 })
-.factory('NavService', function($resource) {
-  return $resource('/blar/server/navigation.json');
-});
+.factory('GetNav', function($resource, $q) {
+  var nav = $resource('/blar/server/navigation.json');
+
+  return nav;
+})
+.factory('GetHome', function ($resource) {
+  var home = $resource('/blar/server/home.json');
+
+  return home;
+})
