@@ -3,16 +3,27 @@ angular.module('Charm', [
   'ngResource'
 ])
 .controller('MainCtrl', function ($scope, GetNav, GetHome) {
-  $scope.nav = GetNav.query();
-  $scope.home = GetHome.query();
-})
-.factory('GetNav', function($resource, $q) {
-  var nav = $resource('/blar/server/navigation.json');
 
-  return nav;
-})
-.factory('GetHome', function ($resource) {
-  var home = $resource('/blar/server/home.json');
+  GetNav.then(function (payload) {
+    $scope.nav = payload.data[0].NAVIGATION;
+  }, function (err) {
+    console.log(err);
+  });
 
-  return home;
+  GetHome.then(function (payload) {
+    $scope.home = payload.data[0];
+  }, function (err) {
+    console.log(err);
+  });
+
 })
+.factory('GetHome', function ($http) {
+  var promise = $http.get('/blar/server/home.json');
+
+  return promise;
+})
+.factory('GetNav', function ($http) {
+  var promise = $http.get('/blar/server/navigation.json');
+
+  return promise;
+});

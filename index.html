@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="Charm" ng-controller="MainCtrl">
+<html ng-app="Charm" ng-controller="MainCtrl" class="{{home.TEMPLATE}}">
 <head>
-  <title ng-bind="home[0].PAGETITLE">Charmant | Home</title>
-  <meta name="description" content="{{home[0].META_DESCRIPTION}}">
-  <meta name="description" content="{{home[0].META_KEYWORDS}}">
+  <title ng-bind="home.PAGETITLE">Charmant | Home</title>
+  <meta name="description" content="{{home.META_DESCRIPTION}}">
+  <meta name="description" content="{{home.META_KEYWORDS}}">
+  <link rel="stylesheet" type="text/css" href="public/reset.css">
+  <link rel="stylesheet" type="text/css" href="public/main.css">
 </head>
 <body>
 <section class="wrapper">
   <header>
     <nav>
-      <li ng-repeat="link in nav[0].NAVIGATION">
+      <li ng-repeat="link in nav">
         <a href="{{link.PATH}}">{{link.LINKTITLE}}</a>
       </li>
       <li class="bookButton">
