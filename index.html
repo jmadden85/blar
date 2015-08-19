@@ -10,6 +10,9 @@
 <body>
 <section class="wrapper">
   <header>
+    <div class="left"></div>
+      <img src="public/assets/img/logo.png" />
+    <div class="right"></div>
     <nav>
       <li ng-repeat="link in nav">
         <a href="{{link.PATH}}">{{link.LINKTITLE}}</a>
@@ -20,7 +23,7 @@
     </nav>
   </header>
   <section class="content">
-
+    <h1>{{home.SLIDES[0].H1}}</h1>
   </section>
   <footer>
     <span>101 state Street</span>

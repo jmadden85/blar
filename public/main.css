@@ -3,9 +3,40 @@ html, body {
   width:100%;
 }
 
+@font-face {
+  font-family:darbyLight;
+  src:url('assets/fonts/DarbySans-Light.otf');
+}
+
+@font-face {
+  font-family:darbyRegular;
+  src:url('assets/fonts/DarbySans-Regular.otf');
+}
+
+@font-face {
+  font-family:darbyPosterLight;
+  src:url('assets/fonts/DarbySansPoster-Light.otf');
+}
+
+@font-face {
+  font-family:darbyPosterRegular;
+  src:url('assets/fonts/DarbySansPoster-Regular.otf');
+}
+
+@font-face {
+  font-family:darbyPosterXLight;
+  src:url('assets/fonts/DarbySansPoster-XLight.otf');
+}
+
+@font-face {
+  font-family:mercury;
+  src:url('assets/fonts/Mercury-TextG1Romant.otf');
+}
+
 .wrapper {
   height:100%;
   width:100%;
+  padding:13px 15px 15px;
 }
 
 .home {
@@ -14,4 +45,89 @@ html, body {
   position:absolute;
   top:0;
   left:0;
+}
+
+header {
+  width:100%;
+  padding:0 15px;
+}
+
+header img {
+  display:inline-block;
+  min-width:265px;
+  margin:0 10px -24px;
+}
+
+header .left, header .right {
+  display:inline-block;
+  border-top:1px solid #fff;
+  width:calc(50% - 148px);
+  content:'';
+}
+
+header .left::before {
+  content:'';
+  background: url('assets/img/borderCorners.png') no-repeat center;
+  width:26px;
+  height:26px;
+  position:absolute;
+  left:5px;
+  top:25px;
+}
+
+header .right::after {
+  content:'';
+  background: url('assets/img/borderCorners.png') no-repeat center;
+  width:26px;
+  height:26px;
+  position:absolute;
+  right:7px;
+  top:25px;
+  transform:rotate(90deg);
+}
+
+nav {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  justify-content:space-around;
+  align-items:flex-start;
+  width:70%;
+  margin:44px auto 0;
+}
+
+nav li {
+  list-style:none;
+  order:0;
+  flex:0 1 auto;
+  align-self:auto;
+}
+
+nav a {
+  color:#fff;
+  text-decoration:none;
+  font-family:darbyLight;
+  font-size:18px;
+  text-transform:uppercase;
+}
+
+nav a:hover {
+  color:#c0b9ba;
+}
+
+.content h1 {
+  text-align:center;
+  color:#fff;
+  font-family:darbyPosterLight;
+  width:605px;
+  font-size:48px;
+  margin:0 auto;
+}
+
+.content h1::before, .content h1::after {
+  border-top:3px solid #fff;
+  content:'';
+  display:block;
+  width:85%;
+  margin:10px auto;
 }
