@@ -65,6 +65,35 @@ header .left, header .right {
   content:'';
 }
 
+header .bookButton {
+  background:#000;
+  padding:5px 0;
+  border-top:1px solid #fff;
+  width:123px;
+  border-bottom:1px solid #fff;
+  text-align:center;
+  position:relative;
+  margin:-9px 0;
+}
+
+header .bookButton::before, header .bookButton::after {
+  background:url('assets/img/bookButtonLeft.png') no-repeat center;
+  position:absolute;
+  content:'';
+  height:34px;
+  width:10px;
+  top:0px;
+}
+
+header .bookButton::before {
+  left:-9px;
+}
+
+header .bookButton::after {
+  right:-9px;
+  transform:rotate(180deg);
+}
+
 header .left::before {
   content:'';
   background: url('assets/img/borderCorners.png') no-repeat center;
@@ -72,7 +101,7 @@ header .left::before {
   height:26px;
   position:absolute;
   left:5px;
-  top:26px;
+  top:25px;
 }
 
 header .right::after {
@@ -82,7 +111,7 @@ header .right::after {
   height:26px;
   position:absolute;
   right:7px;
-  top:26px;
+  top:25px;
   transform:rotate(90deg);
 }
 
@@ -125,7 +154,7 @@ nav a:hover {
 .content::before, .content::after {
   content:'';
   border-left:1px solid #fff;
-  height: calc(100% - 96px);
+  height: calc(100% - 88px);
   position: absolute;
   top: 51px;
 }
@@ -158,8 +187,9 @@ nav a:hover {
 footer {
   text-align:center;
   border-bottom:1px solid #fff;
-  margin:0 auto;
+  margin:-15px auto 0;
   width:calc(100% - 32px);
+  height:39px;
 }
 
 footer span {
@@ -176,7 +206,7 @@ footer::before, footer::after {
   width:26px;
   height:26px;
   position:absolute;
-  bottom:19px;
+  bottom:11px;
 }
 
 footer::before {
