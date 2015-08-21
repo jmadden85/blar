@@ -72,7 +72,7 @@ header .left::before {
   height:26px;
   position:absolute;
   left:5px;
-  top:25px;
+  top:26px;
 }
 
 header .right::after {
@@ -82,7 +82,7 @@ header .right::after {
   height:26px;
   position:absolute;
   right:7px;
-  top:25px;
+  top:26px;
   transform:rotate(90deg);
 }
 
@@ -115,6 +115,29 @@ nav a:hover {
   color:#c0b9ba;
 }
 
+.content {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:calc(100% - 117px);
+}
+
+.content::before, .content::after {
+  content:'';
+  border-left:1px solid #fff;
+  height: calc(100% - 96px);
+  position: absolute;
+  top: 51px;
+}
+
+.content::after {
+  right:12px;
+}
+
+.content::before {
+  left: 10px;
+}
+
 .content h1 {
   text-align:center;
   color:#fff;
@@ -130,4 +153,42 @@ nav a:hover {
   display:block;
   width:85%;
   margin:10px auto;
+}
+
+footer {
+  text-align:center;
+  border-bottom:1px solid #fff;
+  margin:0 auto;
+  width:calc(100% - 32px);
+}
+
+footer span {
+  color:#fff;
+  font-family:darbyLight;
+  font-size:12px;
+  text-transform:uppercase;
+  display:inline-block;
+}
+
+footer::before, footer::after {
+  content:'';
+  background: url('assets/img/borderCorners.png') no-repeat center;
+  width:26px;
+  height:26px;
+  position:absolute;
+  bottom:19px;
+}
+
+footer::before {
+  left:5px;
+  transform:rotate(270deg);
+}
+
+footer::after {
+  right:7px;
+  transform:rotate(180deg);
+}
+
+.space {
+  margin:0 18px;
 }
